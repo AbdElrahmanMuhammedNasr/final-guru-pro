@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymwleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form th:action="@{/save}" th:objec="stu" method="get">
+        <input type="text" placeholder="Enter Name" th:filed="*{name}">
+
+        <input type="submit" value="Add">
+    </form>
+
+</body>
+</html>

@@ -9,7 +9,7 @@ public interface CourseServise {
 
     Course findOneCourse(Long id);
 
-    Course deleteOneCourse(Long id);
+    //void deleteOneCourse(Long id);
 
     Course SaveCourse(Course course);
 }

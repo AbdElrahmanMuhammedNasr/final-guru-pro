@@ -23,12 +23,11 @@ public class CourseServiseImpl implements CourseServise {
         return courseRepo.findById(id).get();
     }
 
-    @Override
-    public Course deleteOneCourse(Long id) {
-            courseRepo.deleteById(id);
-        return null;
+ /*   @Override
+    public void deleteOneCourse(Long id) {
+         courseRepo.deleteById(id);
     }
-
+*/
     @Override
     public Course SaveCourse(Course course) {
         return courseRepo.save(course);

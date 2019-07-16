@@ -3,13 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}" >
+    <link rel="stylesheet" th:href="@{css/style.css}" >
 </head>
 <body>
-    <form th:action="@{/save}" th:objec="stu" method="get">
-        <input type="text" placeholder="Enter Name" th:filed="*{name}">
+<div class="container theCont">
+    <form  th:action="@{/save}"  method="POST">
 
-        <input type="submit" value="Add">
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Enter Student Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="SName">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" >Enter Course Name</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" name="CName">
+        </div>
+
+        <input  class="btn btn-primary" type="submit" value="Add">
     </form>
-
+</div>
 </body>
 </html>

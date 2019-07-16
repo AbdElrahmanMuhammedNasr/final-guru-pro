@@ -1,0 +1,13 @@
+body{
+    background-color: #1b1e21;
+    color: white;
+}
+.container h3{
+    margin-left: 450px;
+}
+.theCont{
+    margin-top: 50px;
+}
+.btn-primary{
+    width: 100%;
+}

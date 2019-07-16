@@ -2,20 +2,39 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+<!--    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}" > -->
+    <link rel="stylesheet" th:href="@{css/style.css}" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-     <table border="1">
-         <tr>
-             <th>Student Id</th>
-             <th>Student Name</th>
-         </tr>
+<div class="container">
 
-         <tr th:each="d:${on}">
-             <td th:text="${d.id}"></td>
-             <td th:text="${d.name}"></td>
-         </tr>
+    <table class="table table-dark">
+        <thead>
+        <tr>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>Course Name</th>
+
+        </tr>
+        </thead>
+         <tbody>
+             <tr th:each="d:${on}">
+                 <td th:text="${d.id}"></td>
+                 <td th:text="${d.name}"></td>
+
+                 <td th:each="x : ${d.course}"
+                     th:text="${x.getName()}" >
+                 <!-- th:text="${x.getId() +' ' + x.getName()}"> -->
+                 </td>
+
+             </tr>
+         </tbody>
+
      </table>
-
+    <form th:action="@{/theAll}">
+        <input  type="submit" class="btn btn-primary" value="Back">
+    </form>
+</div>
 </body>
 </html>
